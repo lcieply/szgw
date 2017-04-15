@@ -6,7 +6,9 @@
 5. Tworzymy nową bazę danych o nazwie: mydb
 
 //==========================================
+
 Teraz można się wylogować i dla pewności zalogować się na nowo stworzone konto, sprawdzić czy widzimy bazę danych mydb.
+
 //==========================================
 
 *6. Otwieramy projekt w intelliJ i wchodzimy do pliku persistance.xml - src/main/resources/META-INF i w dyrektywie <properties> dodajemy na dole linijkę: 
