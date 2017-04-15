@@ -15,13 +15,13 @@ Teraz można się wylogować i dla pewności zalogować się na nowo stworzone k
 
 //==========================================
 
-*6. Otwieramy projekt w intelliJ i wchodzimy do pliku persistance.xml - src/main/resources/META-INF i w dyrektywie <properties> dodajemy na dole linijkę: 
+*6. Otwieramy projekt w intelliJ i wchodzimy do pliku persistence.xml - src/main/resources/META-INF i w dyrektywie <properties> dodajemy na dole linijkę: 
 
 <property name="hibernate.hbm2ddl.auto" value="create" />
 
 *7. Uruchamiamy projekt.
 
-*8. Usuwamy linijkę z persistance którą dodaliśmy.
+*8. Usuwamy linijkę z persistence którą dodaliśmy.
 
 *Dzięki tej linijce hibernate przejdzie nam po wszystkich plikach i poszuka adnotacji '@ Entity' - jeżeli taką napotka to z tą linijką wykona operacje create table na bazie danych. Ale powinniśmy to wykonać tylko raz - jeżeli jej nie usuniemy to tabela w bazie danych po ponownym uruchomieniu zostanie stworzona na nowo - tracimy wszystkie dane w niej zapisane!
 
