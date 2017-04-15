@@ -23,6 +23,6 @@ Teraz można się wylogować i dla pewności zalogować się na nowo stworzone k
 
 *8. Usuwamy linijkę z persistance którą dodaliśmy.
 
-*Dzięki tej linijce hibernate przejdzie nam po wszystkich plikach i poszuka adnotacji '@Entity' - jeżeli taką napotka to z tą linijką wykona operacje create table na bazie danych. Ale powinniśmy to wykonać tylko raz - jeżeli jej nie usuniemy to tabela w bazie danych po ponownym uruchomieniu zostanie stworzona na nowo - tracimy wszystkie dane w niej zapisane!
+*Dzięki tej linijce hibernate przejdzie nam po wszystkich plikach i poszuka adnotacji '@ Entity' - jeżeli taką napotka to z tą linijką wykona operacje create table na bazie danych. Ale powinniśmy to wykonać tylko raz - jeżeli jej nie usuniemy to tabela w bazie danych po ponownym uruchomieniu zostanie stworzona na nowo - tracimy wszystkie dane w niej zapisane!
 
 **linijka  java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.OFF); wyłącza nam logi z hibernate'a, śmieci to bardzo konsolę dlatego jest linijka z wyłączeniem tego, ale w trakcie pisania można sobie włączać żeby widzieć co się dzieje z bazą.
