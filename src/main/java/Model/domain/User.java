@@ -10,11 +10,6 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import java.util.List;
 
-/**
- * Created by Łukasz on 15.04.2017.
- */
-
-
 @Entity
 public class User {
     @Id @GeneratedValue
