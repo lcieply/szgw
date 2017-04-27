@@ -25,7 +25,7 @@ public class DrugView extends JFrame {
     private JButton deleteButton = new JButton("Usuń");
 
     public String getDrugName() throws EmptyFieldException {
-        if (!drugName.getText().isEmpty())
+        if (!drugName.getText().equals(""))
             return drugName.getText();
         throw new EmptyFieldException();
     }
@@ -35,7 +35,7 @@ public class DrugView extends JFrame {
     }
 
     public String getDrugType() throws EmptyFieldException {
-        if (!drugType.getText().isEmpty())
+        if (!drugType.getText().equals(""))
             return drugType.getText();
         throw new EmptyFieldException();
     }
@@ -45,7 +45,7 @@ public class DrugView extends JFrame {
     }
 
     public String getApplication() throws EmptyFieldException {
-        if (!application.getText().isEmpty())
+        if (!application.getText().equals(""))
             return application.getText();
         throw new EmptyFieldException();
     }
@@ -69,10 +69,7 @@ public class DrugView extends JFrame {
         this.need.setSelected(need);
     }
 
-    public String getResult() {
-
-        return result.getText();
-    }
+    public String getResult() { return result.getText(); }
 
     public void setResult(String result) {
         this.result.setText(result);
