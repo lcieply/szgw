@@ -1,8 +1,10 @@
 package Model;
 
+import Controller.DrugController;
 import Controller.LoginViewController;
 import Model.domain.Drug;
 import Model.domain.User;
+import View.DrugView;
 import View.LoginView;
 
 import javax.persistence.EntityManager;
@@ -17,9 +19,15 @@ import java.util.logging.Level;
 
 public class MainClass {
     public static void main(String[] args){
-        /*java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.OFF);
+        /*User.createUser("test","test",1);
+        java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.OFF);
         LoginView view = new LoginView();
         LoginViewController controller = new LoginViewController(view);
         controller.control();*/
+
+        DrugView view = new DrugView();
+        Drug model = new Drug();
+        DrugController controller = new DrugController(view, model);
+        view.setVisible(true);
     }
 }
