@@ -50,6 +50,12 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+    public static Integer accountNameToInteger(String name){
+        if(name.equals("Admin")) return new Integer(0);
+        else if(name.equals("Manager")) return new Integer(1);
+        else if(name.equals("Worker")) return new Integer(2);
+        return new Integer(3);
+    }
     public static boolean updateType(User user, Integer type){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("mydb");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -59,7 +65,7 @@ public class User {
             entityManager.merge(user);
         }
         catch(NullPointerException e){
-            System.out.println("User not found!");
+            //System.out.println("User not found!");
         }
         entityManager.getTransaction().commit();
         entityManager.close();
@@ -75,7 +81,7 @@ public class User {
             entityManager.merge(user);
         }
         catch(NullPointerException e){
-            System.out.println("User not found!");
+            //System.out.println("User not found!");
         }
         entityManager.getTransaction().commit();
         entityManager.close();
@@ -96,7 +102,7 @@ public class User {
                 }
                 entityManager.getTransaction().commit();
             } catch (PersistenceException e) {
-                System.out.println("User not found!");
+                //System.out.println("User not found!");
                 entityManager.getTransaction().rollback();
                 result = false;
             } finally {
@@ -120,7 +126,7 @@ public class User {
             entityManager.getTransaction().commit();
         }
         catch (PersistenceException e){
-            System.out.println("User not found!");
+            //System.out.println("User not found!");
             entityManager.getTransaction().rollback();
             result = false;
         }finally {
@@ -138,7 +144,7 @@ public class User {
             List<User> users = query.getResultList();
             return users;
         }catch (NoResultException e){
-            System.out.println("User not found!");
+            //System.out.println("User not found!");
             return null;
         }finally {
             entityManager.close();
@@ -154,7 +160,7 @@ public class User {
             User user = query.getSingleResult();
             return user;
         }catch (NoResultException e){
-            System.out.println("User not found!");
+            //System.out.println("User not found!");
             return null;
         }finally {
             entityManager.close();
@@ -179,7 +185,7 @@ public class User {
             entityManager.getTransaction().commit();
         }
         catch (PersistenceException e){
-            System.out.println("Login already exist!");
+            //System.out.println("Login already exist!");
             entityManager.getTransaction().rollback();
             result = false;
         }finally {
@@ -197,7 +203,7 @@ public class User {
             User user = query.getSingleResult();
             return true;
         }catch (NoResultException e){
-            System.out.println("Wrong username or password!");
+            //System.out.println("Wrong username or password!");
             return false;
         }finally {
             entityManager.close();
