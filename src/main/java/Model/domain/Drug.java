@@ -310,4 +310,29 @@ public class Drug {
         }
         return res;
     }
+    public static boolean removeLekarze(List<Lekarz> lekarze){
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("mydb");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        boolean result = true;
+        for(Lekarz lekarz: lekarze) {
+            try {
+                if(entityManager.contains(lekarz))
+                    entityManager.remove(lekarz);
+                else{
+                    entityManager.remove(entityManager.merge(lekarz));
+                }
+                entityManager.getTransaction().commit();
+            } catch (PersistenceException e) {
+                System.out.println("Nie ma takiego lekarza w bazie!");
+                entityManager.getTransaction().rollback();
+                result = false;
+            } finally {
+                entityManager.close();
+                entityManagerFactory.close();
+            }
+        }
+        return result;
+    }
+
 }

@@ -17,9 +17,9 @@ import java.util.logging.Level;
 
 public class MainClass {
     public static void main(String[] args){
-        /*java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.OFF);
+        java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.OFF);
         LoginView view = new LoginView();
         LoginViewController controller = new LoginViewController(view);
-        controller.control();*/
+        controller.control();
     }
 }
