@@ -1,42 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9406f0c1-877c-42bf-9bf3-ac3faa6d669c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Controller/DrugViewController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Controller/LekarzViewController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Controller/LoginViewController$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Controller/LoginViewController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Model/MainClass.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Model/domain/Drug.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Model/domain/Lekarz.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Model/domain/User.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/View/DrugView.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/View/LoginView.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_31.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_4_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_3_5_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_3_5_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_1_1_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_3_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_annotations_1_2_0_Beta1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Controller/LekarzViewController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Model/domain/Lekarz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
+    <list default="true" id="9406f0c1-877c-42bf-9bf3-ac3faa6d669c" name="Default" comment="Merge branch 'master' of https://bitbucket.org/mrtg/system_zarzadzania_gabinetem_weterynaryjnym&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/Model/MainClass.java&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Controller/AdminControlPanelController/CreateUserController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Controller/DrugController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Model/AdminControlPanelModel/CreateUserModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/View/AdminControlPanel/CreateUserView.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Controller/DrugViewController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Controller/DrugViewController.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Model/MainClass.class" afterPath="$PROJECT_DIR$/target/classes/Model/MainClass.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Model/domain/User.class" afterPath="$PROJECT_DIR$/target/classes/Model/domain/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/View/DrugView.class" afterPath="$PROJECT_DIR$/target/classes/View/DrugView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/MainClass.java" afterPath="$PROJECT_DIR$/src/main/java/Model/MainClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/domain/Drug.java" afterPath="$PROJECT_DIR$/src/main/java/Model/domain/Drug.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/szgw_app.iml" afterPath="$PROJECT_DIR$/szgw_app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/domain/Lekarz.java" afterPath="$PROJECT_DIR$/src/main/java/Model/domain/Lekarz.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/domain/User.java" afterPath="$PROJECT_DIR$/src/main/java/Model/domain/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/View/DrugView.java" afterPath="$PROJECT_DIR$/src/main/java/View/DrugView.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,11 +31,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainClass.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Model/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="68">
+              <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -72,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -85,8 +64,8 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Model/domain/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="108" column="3" lean-forward="false" selection-start-line="84" selection-start-column="3" selection-end-line="108" selection-end-column="3" />
+            <state relative-caret-position="617">
+              <caret line="114" column="3" lean-forward="false" selection-start-line="114" selection-start-column="3" selection-end-line="114" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -96,27 +75,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Model/domain/Drug.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4862">
-              <caret line="313" column="85" lean-forward="true" selection-start-line="313" selection-start-column="85" selection-end-line="313" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lekarz.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Model/domain/Lekarz.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DrugViewController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DrugViewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <caret line="313" column="85" lean-forward="false" selection-start-line="313" selection-start-column="85" selection-end-line="313" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -126,7 +85,37 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Controller/LoginViewController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="257">
-              <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+              <caret line="25" column="43" lean-forward="false" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lekarz.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/domain/Lekarz.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="272" column="40" lean-forward="true" selection-start-line="272" selection-start-column="40" selection-end-line="272" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DrugController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DrugController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="17" column="70" lean-forward="true" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateUserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/AdminControlPanelController/CreateUserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -165,8 +154,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Model/MainClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/domain/lekarz.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Model/domain/Lekarz.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/domain/Drug.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/domain/Lekarz.java" />
       </list>
     </option>
   </component>
@@ -324,6 +313,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="szgw_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system_zarzadzania_gabinetem_weterynaryjnym" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminControlPanelController" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -583,7 +602,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -756,18 +775,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/domain/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="108" column="3" lean-forward="false" selection-start-line="84" selection-start-column="3" selection-end-line="108" selection-end-column="3" />
+        <state relative-caret-position="617">
+          <caret line="114" column="3" lean-forward="false" selection-start-line="114" selection-start-column="3" selection-end-line="114" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -775,7 +786,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/domain/Drug.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4862">
-          <caret line="313" column="85" lean-forward="true" selection-start-line="313" selection-start-column="85" selection-end-line="313" selection-end-column="85" />
+          <caret line="313" column="85" lean-forward="false" selection-start-line="313" selection-start-column="85" selection-end-line="313" selection-end-column="85" />
           <folding />
         </state>
       </provider>
@@ -783,7 +794,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/LoginViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
-          <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+          <caret line="25" column="43" lean-forward="false" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -804,18 +815,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/domain/Lekarz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/AdminControlPanelController/CreateUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DrugController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="70" lean-forward="true" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/domain/Lekarz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="272" column="40" lean-forward="true" selection-start-line="272" selection-start-column="40" selection-end-line="272" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
           <folding />
         </state>
       </provider>
