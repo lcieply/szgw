@@ -41,6 +41,7 @@ public class CreateUserController {
                     User.createUser(view.getLoginField().getText(), String.valueOf(view.getPasswordField().getPassword()), User.accountNameToInteger(view.getUserTypeCombo().getSelectedItem().toString()));
                     view.clearAll();
                     model.getUserListView().getModel().updateData();
+                    model.getUserListView().search();
                     model.getUserListView().getTable().updateUI();
                 }
             }

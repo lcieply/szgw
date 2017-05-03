@@ -26,8 +26,7 @@ public class UserListController {
     private MouseListener doubleClickTableListener;
     private KeyListener searchKeyListener;
     private ActionListener newUserActionListener;
-    private TableRowSorter<CreateUserTableModel> sorter;
-    public UserListController(UserListView view, UserListModel model){this.model=model; this.view=view; this.control();sorter = new TableRowSorter(view.getModel()); view.getTable().setRowSorter(sorter);}
+    public UserListController(UserListView view, UserListModel model){this.model=model; this.view=view; this.control();}
     public void control(){
         deleteActionListener = new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -42,7 +41,7 @@ public class UserListController {
                 }
                 view.getTable().clearSelection();
                 view.getModel().updateData();
-                search();
+                view.search();
                 view.getTable().updateUI();
 
             }
@@ -67,7 +66,7 @@ public class UserListController {
         searchKeyListener = new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                search();
+                view.search();
             }
         };
 
@@ -85,12 +84,5 @@ public class UserListController {
         view.getDeleteButton().addActionListener(deleteActionListener);
         view.getEditButton().addActionListener(editActionListener);
 
-    }
-    public void search(){
-        if(view.getSearchField().getText().trim().length() == 0){
-            sorter.setRowFilter(null);
-        }else{
-            sorter.setRowFilter(RowFilter.regexFilter("(?i)" + view.getSearchField().getText().trim()));
-        }
     }
 }

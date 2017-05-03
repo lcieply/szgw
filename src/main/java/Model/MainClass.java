@@ -36,12 +36,6 @@ public class MainClass {
         User.createUser("admin", "admin", 0);
         User.createUser("test", "test", 2);
         User.createUser("user", "user", 3);
-        String[] core = new String[]{"abc", "tst", "gij", "obc", "ssp"};
-        for(int i = 0 ; i < 10; i++){
-            for(int j = 0 ; j < core.length ; j++){
-                User.createUser(core[j]+String.valueOf(i), core[j]+String.valueOf(i), j%4);
-            }
-        }
         UserListView view = new UserListView();
         UserListModel model = new UserListModel();
         UserListController controller = new UserListController(view, model);

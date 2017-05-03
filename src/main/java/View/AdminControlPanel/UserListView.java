@@ -27,6 +27,7 @@ public class UserListView{
     private JButton editButton;
     private JButton deleteButton;
     private JButton newUserButton;
+    private TableRowSorter<CreateUserTableModel> sorter;
 
     public UserListView(){
         searchLabel = new JLabel("Specify a word to match: ");
@@ -44,6 +45,8 @@ public class UserListView{
         table.setRowSelectionAllowed(true);
         table.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
         table.setAutoCreateRowSorter(true);
+        sorter = new TableRowSorter(getModel());
+        getTable().setRowSorter(sorter);
         scrollPane = new JScrollPane(table);
         southPanel.add(searchLabel);
         southPanel.add(searchField);
@@ -56,6 +59,14 @@ public class UserListView{
         frame.pack();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+    }
+
+    public void search(){
+        if(getSearchField().getText().trim().length() == 0){
+            sorter.setRowFilter(null);
+        }else{
+            sorter.setRowFilter(RowFilter.regexFilter("(?i)" + getSearchField().getText().trim()));
+        }
     }
 
     public JFrame getFrame() {
