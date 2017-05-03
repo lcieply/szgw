@@ -4,9 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 
-/**
- * Created by Łukasz on 27.04.2017.
- */
 public class CreateUserView {
     private JFrame frame;
     private JPanel panel;
@@ -79,7 +76,7 @@ public class CreateUserView {
         frame.add(errorPanel,BorderLayout.SOUTH);
         frame.add(panel,BorderLayout.CENTER);
 
-        frame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setTitle("Create new user");
         frame.pack();
         frame.setVisible(true);

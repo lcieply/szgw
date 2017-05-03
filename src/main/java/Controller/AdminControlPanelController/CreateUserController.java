@@ -11,9 +11,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by Łukasz on 27.04.2017.
- */
 public class CreateUserController {
     private CreateUserView view;
     private CreateUserModel model;
@@ -43,6 +40,8 @@ public class CreateUserController {
                 }else{
                     User.createUser(view.getLoginField().getText(), String.valueOf(view.getPasswordField().getPassword()), User.accountNameToInteger(view.getUserTypeCombo().getSelectedItem().toString()));
                     view.clearAll();
+                    model.getUserListView().getModel().updateData();
+                    model.getUserListView().getTable().updateUI();
                 }
             }
         };
