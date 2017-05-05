@@ -24,8 +24,8 @@ public class Drug {
     @Override
     public String toString() {
         return "Drug{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                //"id='" + id + '\'' +
+                "name='" + name + '\'' +
                 ", type='" + type + '\'' +
                 ", application='" + application + '\'' +
                 ", number=" + number +
@@ -105,12 +105,40 @@ public class Drug {
             entityManager.getTransaction().commit();
         }
         catch (PersistenceException e) {
-            System.out.print("Taki lek już istnieje.");
+            System.out.printf("Drug already exists (name: %s).", name);
             entityManager.getTransaction().rollback();
             res = false;
         }
         catch (PropertyValueException e) {
-            System.out.print("Niekompletne dane.");
+            System.out.print("Incomplete data.");
+            entityManager.getTransaction().rollback();
+            res = false;
+        }
+        finally {
+            entityManager.close();
+            entityManagerFactory.close();
+        }
+        return res;
+    }
+
+    public static boolean createDrug(Drug d) {
+        Drug drug = new Drug(d.name, d.type, d.application, d.number, d.need);
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("mydb");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        boolean res = true;
+
+        try {
+            entityManager.persist(drug);
+            entityManager.getTransaction().commit();
+        }
+        catch (PersistenceException e) {
+            System.out.printf("Drug already exists (name: %s).", d.name);
+            entityManager.getTransaction().rollback();
+            res = false;
+        }
+        catch (PropertyValueException e) {
+            System.out.print("Incomplete data.");
             entityManager.getTransaction().rollback();
             res = false;
         }
@@ -130,7 +158,7 @@ public class Drug {
             return entityManager.createQuery("SELECT d FROM Drug d", Drug.class).getResultList();
         }
         catch (NoResultException e) {
-            System.out.print("Niczego nie znaleziono.");
+            System.out.print("No drugs were found.");
             return null;
         }
         finally {
@@ -148,7 +176,7 @@ public class Drug {
             return entityManager.createQuery("SELECT d.name FROM Drug d", String.class).getResultList();
         }
         catch (NoResultException e) {
-            System.out.print("Niczego nie znaleziono.");
+            System.out.print("No drugs were found.");
             return null;
         }
         finally {
@@ -166,7 +194,7 @@ public class Drug {
             return entityManager.createQuery("SELECT d FROM Drug d WHERE d.id =:SEARCHED", Drug.class).setParameter("SEARCHED", id).getSingleResult();
         }
         catch (NoResultException e) {
-            System.out.print("Niczego nie znaleziono.");
+            System.out.printf("Drug not found (ID: %d).", id);
             return null;
         }
         finally {
@@ -184,7 +212,7 @@ public class Drug {
             return entityManager.createQuery("SELECT d FROM Drug d WHERE d.name =:SEARCHED", Drug.class).setParameter("SEARCHED", name).getSingleResult();
         }
         catch (NoResultException e) {
-            System.out.print("Niczego nie znaleziono.");
+            System.out.printf("Drug not found (name: %s).", name);
             return null;
         }
         finally {
@@ -202,7 +230,7 @@ public class Drug {
             return entityManager.createQuery("SELECT d FROM Drug d WHERE d.type =:SEARCHED", Drug.class).setParameter("SEARCHED", type).getResultList();
         }
         catch (NoResultException e) {
-            System.out.print("Niczego nie znaleziono.");
+            System.out.printf("No drugs were found (type: %s).", type);
             return null;
         }
         finally {
@@ -221,7 +249,7 @@ public class Drug {
             entityManager.merge(drug);
         }
         catch (NullPointerException e) {
-            System.out.print("Próba zmiany typu nieistniejącego leku.");
+            System.out.print("Cannot modify a non-existent drug.");
             return false;
         }
         entityManager.getTransaction().commit();
@@ -240,7 +268,7 @@ public class Drug {
             entityManager.merge(drug);
         }
         catch (NullPointerException e) {
-            System.out.print("Próba zmiany zastosowania nieistniejącego leku.");
+            System.out.print("Cannot modify a non-existent drug.");
             return false;
         }
         entityManager.getTransaction().commit();
@@ -259,7 +287,7 @@ public class Drug {
             entityManager.merge(drug);
         }
         catch (NullPointerException e) {
-            System.out.print("Próba zmiany liczby sztuk nieistniejącego leku.");
+            System.out.print("Cannot modify a non-existent drug.");
             return false;
         }
         entityManager.getTransaction().commit();
@@ -278,7 +306,7 @@ public class Drug {
             entityManager.merge(drug);
         }
         catch (NullPointerException e) {
-            System.out.print("Próba zmiany potrzeby zamówienia nieistniejącego leku.");
+            System.out.print("Cannot modify a non-existent drug.");
             return false;
         }
         entityManager.getTransaction().commit();
@@ -301,7 +329,7 @@ public class Drug {
             entityManager.getTransaction().commit();
         }
         catch (PersistenceException e) {
-            System.out.print("Próba usunięcia niestniejącego leku.");
+            System.out.print("Cannot remove a non-existent drug.");
             res = false;
         }
         finally {
@@ -309,5 +337,9 @@ public class Drug {
             entityManagerFactory.close();
         }
         return res;
+    }
+
+    public static boolean compareDrugs(Drug drug1, Drug drug2) {
+        return drug1.toString().equals(drug2.toString());
     }
 }
