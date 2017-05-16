@@ -20,6 +20,17 @@ public class User {
     private String password;
     @Column(name="accountType")
     private Integer type;
+
+    public String getAccountTypeName() {
+        return accountTypeName;
+    }
+
+    public void setAccountTypeName(String accountTypeName) {
+        this.accountTypeName = accountTypeName;
+    }
+
+    @Column(name="accountTypeName")
+    private String accountTypeName;
     public Integer getType() {
         return type;
     }
@@ -55,6 +66,12 @@ public class User {
         else if(name.equals("Manager")) return new Integer(1);
         else if(name.equals("Worker")) return new Integer(2);
         return new Integer(3);
+    }
+    public static String accountTypeToString(Integer value){
+        if(value == 0) return "Admin";
+        else if(value == 1) return "Manager";
+        else if(value == 2) return "Worker";
+        else return "Client";
     }
     public static boolean updateType(User user, Integer type){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("mydb");
@@ -151,6 +168,21 @@ public class User {
             entityManagerFactory.close();
         }
     }
+    public static List<User> getAllUsers(){
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("mydb");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        try {
+            TypedQuery<User> query = entityManager.createQuery("select u from User u", User.class);
+            List<User> users = query.getResultList();
+            return users;
+        }catch (NoResultException e){
+            return null;
+        }finally {
+            entityManager.close();
+            entityManagerFactory.close();
+        }
+    }
     public static User getUserByLogin(String condition){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("mydb");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -172,6 +204,7 @@ public class User {
         this.login = login;
         this.password = password;
         this.type = type;
+        this.accountTypeName = accountTypeToString(type);
     }
 
     public static boolean createUser(String login, String password, Integer type) {

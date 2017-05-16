@@ -2,8 +2,10 @@ package Controller;
 
 import Model.domain.User;
 import View.LoginView;
+import View.MainMenuView;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -20,12 +22,18 @@ public class LoginViewController {
                     loginView.getFrame().dispose();
                     User user = User.getUserByLogin(loginView.getLoginField().getText());
 
+                    MainMenuView view=new MainMenuView();
+                    MainMenuController menu=new MainMenuController(view);
+
                     //Tutaj nowy controller do glownego okna - User potrzebny zeby go przeslac do modelu kolejnego z ktorego glowne okno bedzie korzystac (uprawnienia)
-                    JFrame frame = new JFrame();
-                    frame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-                    frame.setVisible(true);
-                    //===================
-                }else{
+                  /*  button1.setPreferredSize(new Dimension(40,40));
+                    button2.setPreferredSize(new Dimension(40,40));
+                    button3.setPreferredSize(new Dimension(40,40));
+                    button4.setPreferredSize(new Dimension(40,40));
+*/
+  //===================
+                }
+                else{
                     JOptionPane.showMessageDialog(loginView.getFrame(),
                             "Wrong username or password!",
                             "ERROR",

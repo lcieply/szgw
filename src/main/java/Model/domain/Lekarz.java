@@ -117,13 +117,13 @@ public class Lekarz {
         }
     }
 
-    public static List<Drug> getAllLekarzSurnames() {
+    public static List<Lekarz> getAllLekarzSurnames() {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("mydb");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
 
         try {
-            return entityManager.createQuery("SELECT l FROM Lekarz l", Drug.class).getResultList();
+            return entityManager.createQuery("SELECT l FROM Lekarz l", Lekarz.class).getResultList();
         }
         catch (NoResultException e) {
             System.out.print("Brak wyników");
