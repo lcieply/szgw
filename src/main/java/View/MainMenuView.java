@@ -10,16 +10,20 @@ public class MainMenuView {
 
     JFrame frame;
     JButton button1,button2,button3,button4;
+    String manage="Zarzadzaj uzytkownikami";
+    String visit="Wizyta";
+    String drug="Leki";
+    String doctor="Lekarze";
 
     public MainMenuView()
     {
         frame = new JFrame();
         frame.setSize(500,500);
 
-        button1=new JButton("Zarządzaj użytkownikami");
-        button2=new JButton("Wizyta");
-        button3=new JButton("Leki");
-        button4=new JButton("Lekarze");
+        button1=new JButton(manage);
+        button2=new JButton(visit);
+        button3=new JButton(drug);
+        button4=new JButton(doctor);
         frame.setLocation(50,50);
         frame.setLayout(new GridLayout(4,1));
 
@@ -29,10 +33,6 @@ public class MainMenuView {
         frame.add(button3);
         frame.add(button4);
         //button4.addActionListener(this);
-
-        frame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-
 
         frame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
