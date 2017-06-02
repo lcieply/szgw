@@ -1,19 +1,4 @@
-[Task board](https://szgw.visualstudio.com/System%20zarządzania%20gabinetem%20weterynaryjnym/_backlogs/TaskBoard/)
-
-[Backlog](https://docs.google.com/spreadsheets/d/1zXGOlBYHO0EIOlIcezO6r7pZlGAKGA2oV4K1Y9NnheM/)
-
-* * *
-
-**Definition of done**
-
-* wymagania funkcjonalne
-* testy jednostkowe
-* code review
-* black box
-
-* * *
-
-1. Pobieramy i instalujemy wamp:
+1. Pobieramy i instalujemy wamp lub sam mysql:
 [Click](http://www.wampserver.com/en/)
 
 2. Po instalacji uruchamiamy (z uprawnieniami administratora na wszelki wypadek).
